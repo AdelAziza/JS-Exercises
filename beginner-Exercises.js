@@ -206,5 +206,57 @@ function firstChar(a){
     
     }
 
+    /*Exercise 20
+    Write a function normalize, that replaces '-' with '/' in a date string.
+    
+    Example: normalize('20-05-2017') should return '20/05/2017'*/
+
+    function normalize(i){
+
+        let value =i.replace('-','/').replace('-','/');
+        
+        return value;
+
+        //output: '20/05/2017'
+
+    }
+
+
+       
+/*Rounding
+If you want to round a number, you can use the Math.round(), Math.floor() and Math.ceil() functions.
+
+Write a function round100 that rounds a number to the nearest hundred.
+
+Example: round100(1749) should return 1700 and round100(856.12) should return 900.*/
+//Answer :
+
+function round100(num1){
+
+let numD=Math.round(num1/100)*100;
+
+return numD
+
+}
+
+//Examples:
+
+round100(49.999) returns 0.
+
+round100(50) returns 100.
+
+round100(349) returns 300.
+
+round100(350) returns 400.
+
+round100(4649) returns 4600.
+
+round100(4650) returns 4700
+
+
+    
+        
+
+
 
 
