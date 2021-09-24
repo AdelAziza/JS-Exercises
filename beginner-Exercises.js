@@ -239,7 +239,7 @@ return numD
 
 }
 
-//Examples:
+/*Examples:
 
 round100(49.999) returns 0.
 
@@ -251,7 +251,7 @@ round100(350) returns 400.
 
 round100(4649) returns 4600.
 
-round100(4650) returns 4700
+round100(4650) returns 4700*/
 
 
 /*Random numbers
@@ -290,7 +290,7 @@ You can calculate with Boolean values similar to numbers.
 JavaScript has three Boolean operators: && (and), || (or) and ! (not). && links two Boolean values. If both values are true, the result is true. In all other cases it is false. With || the result is true, if at least one of the two input values is true. If both input values are false, the result is false. ! is applied to a single Boolean value and inverts this value: !true is false and !false is true.*/
 function xor(a,b){
 
-return ( a || b ) && !( a && b );)( foo, bar )
+return ( a || b ) && !( a && b ) ( foo, bar )
 }
 
 /*Write a function equals that checks 3 values for strict equality. The function should only return true if all 3 values are equal.
@@ -313,9 +313,9 @@ function unequal(num1,num2,num3){
 return num1!==num2 && num1!==num3 && num2!==num3
 
 }
-unequal(1, 2, 3) returns true.
+//unequal(1, 2, 3) returns true.
 
-/*Exercise
+/*Exercise Math.floor()
 Write a function repdigit that determines whether a two-digit decimal is a repdigit or not. If the decimal is a repdigit, 'Repdigit!' should be returned, otherwise 'No Repdigit!'.
 
 Example: repdigit(22) should return 'Repdigit!' and repdigit(23) should return 'No Repdigit!'*/
@@ -329,13 +329,13 @@ let tens = Math.floor(num / 10);
   return 'No Repdigit!';
 
 }
-//Tests:
+/*Tests:
 repdigit(11) returns 'Repdigit!'
 
-repdigit(12) returns 'No Repdigit!'.
+repdigit(12) returns 'No Repdigit!'.*/
 
 /*
-Exercise
+Exercise if condition
 Write a function addWithSurcharge that adds two amounts with surcharge. For each amount less than or equal to 10, the surcharge is 1. For each amount greater than 10, the surcharge is 2.
 
 Example: addWithSurcharge(5, 15) should return 23.*/
@@ -360,8 +360,158 @@ function addWithSurcharge(a, b) {
   return a + b + surcharge;
 }
 
+/* addWithSurcharge(1, 1) returns 4.
+
+// addWithSurcharge(10, 10) returns 22.
+
+// addWithSurcharge(11, 10) returns 24.*/
+
+
+/*Exercise If else
+Write a function addWithSurcharge that adds two amounts with surcharge. For each amount less than or equal to 10, the surcharge is 1. For each amount greater than 10 and less than or equal to 20, the surcharge is 2. For each amount greater than 20, the surcharge is 3.
+
+Example: addWithSurcharge(10, 30) should return 44.*/
+
+function addSurcharge(amount){
+
+  if (amount <= 10) {
+    return amount + 1;
+  } else if (amount<= 20) {
+    return amount + 2;
+  } else {
+    return amount + 3;
+  }    
+}
+
+function addWithSurcharge(amount1, amount2) {
+  return addSurcharge(amount1) + addSurcharge(amount2);
+}
+
+/*Tests
 addWithSurcharge(1, 1) returns 4.
 
 addWithSurcharge(10, 10) returns 22.
 
 addWithSurcharge(11, 10) returns 24.
+
+addWithSurcharge(10, 11) returns 24.
+
+addWithSurcharge(11, 11) returns 26.
+
+addWithSurcharge(10, 20) returns 33.
+
+addWithSurcharge(20, 10) returns 33.
+
+addWithSurcharge(10, 21) returns 35.
+
+addWithSurcharge(21, 10) returns 35.
+
+addWithSurcharge(11, 20) returns 35.
+
+addWithSurcharge(20, 11) returns 35.
+
+addWithSurcharge(11, 21) returns 37.
+
+addWithSurcharge(21, 11) returns 37.
+
+addWithSurcharge(20, 20) returns 44.
+
+addWithSurcharge(21, 20) returns 46.
+
+addWithSurcharge(20, 21) returns 46.
+
+addWithSurcharge(21, 21) returns 48.
+
+
+*/
+
+
+/*Exercise Arrays
+
+Write a function toArray that takes 2 values and returns these values in an array.
+
+Example: toArray(5, 9) should return the array [5, 9].*/
+
+function toArray(valueArray1,valueArray2){
+
+  let valueArray=[valueArray1,valueArray2]
+  
+  return valueArray
+  
+  
+  }
+
+  /*Tests:
+
+    toArray(1, 2) returns an Array.
+
+    toArray(1, 2) returns [ 1, 2 ].
+
+    toArray('Tom', 'Huck') returns [ 'Tom', 'Huck' ].
+  */
+
+
+    /*Exercise Get First Element in array
+    Write a function getFirstElement that takes an array and returns the first element of the array.
+    
+    Example: getFirstElement([1, 2]) should return 1*/
+
+    function getFirstElement(numArray1){
+
+      return numArray1[0];  
+      
+      }
+/* Tests:
+
+getFirstElement([1, 2]) returns 1.
+
+getFirstElement(['Firefox', 'Chrome']) returns 'Firefox'.
+
+
+*/
+
+
+/*Exercise : Set array elements
+Write a function setFirstElement that takes an array and an arbitrary variable. The variable should be inserted as the first element in the array. The array should be returned.
+
+Example: setFirstElement([1, 2], 3) should return [3, 2].*/
+
+
+function setFirstElement(anArray,valueFirst){
+
+  anArray[0]=valueFirst
+   
+  return anArray;
+  
+  }
+
+/* Tests:
+
+setFirstElement([1, 2], 3) returns [ 3, 2 ].
+
+setFirstElement([], 1) returns [ 1 ].
+
+setFirstElement(['a', 'b', 'c'], 'x') returns [ 'x', 'b', 'c' ].
+
+*/
+
+
+/*Exercise Array: length
+Write a function getLastElement that takes an array and returns the last element of the array.
+
+Example: getLastElement([1, 2]) should return 2.*/
+
+function getLastElement(anArray) {
+  let lastIndex = anArray.length - 1;
+  return anArray[lastIndex];
+}
+
+/* Tests: 
+
+getLastElement([1, 2]) returns 2.
+
+getLastElement(['a', 'b', 'c']) returns 'c'
+
+
+*/
+
