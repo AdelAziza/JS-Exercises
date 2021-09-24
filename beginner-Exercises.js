@@ -515,3 +515,62 @@ getLastElement(['a', 'b', 'c']) returns 'c'
 
 */
 
+
+
+
+/*Sorting arrays
+Now we can sort arrays with given length.
+Exercise
+Write a function sort that takes an array filled with 3 numbers and returns these 3 numbers sorted in ascending order as an array.
+
+Example: sort([2, 3, 1]) should return [1, 2, 3].*/
+
+
+function sort (arraySort){
+
+  let sortArray=arraySort.sort();
+  
+  return sortArray;
+ 
+  }
+
+/*
+  Tests:
+
+sort([1, 2, 3]) returns [ 1, 2, 3 ].
+
+sort([1, 3, 2]) returns [ 1, 2, 3 ].
+
+sort([2, 1, 3]) returns [ 1, 2, 3 ].
+
+*/
+
+/*
+Exercise : Array: shift() and push()
+
+Write a function rotate that rotates the elements of an array. All elements should be moved one position to the left. The 0th element should be placed at the end of the array. The rotated array should be returned.
+
+Example: rotate(['a', 'b', 'c']) should return ['b', 'c', 'a'].
+
+*/
+function rotate(anArray) {
+  let element0 = anArray.shift();
+  anArray.push(element0);
+  return anArray;
+}
+
+/*
+Tests:
+
+rotate([1, 2]) returns [ 2, 1 ].
+
+rotate(['a', 'b', 'c']) returns [ 'b', 'c', 'a' ].
+
+rotate([1, 'b', 'c', 37]) returns [ 'b', 'c', 37, 1 ].
+*/
+
+/*Exercise Indexof() get an index elemnet in the array
+Write a function add that adds an element to the end of an array. However, the element should only be added if it is not already in the array.
+
+Example: add([1, 2], 3) should return [1, 2, 3] and add([1, 2], 2) should return [1, 2].*/
+
