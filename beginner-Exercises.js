@@ -334,5 +334,34 @@ repdigit(11) returns 'Repdigit!'
 
 repdigit(12) returns 'No Repdigit!'.
 
+/*
+Exercise
+Write a function addWithSurcharge that adds two amounts with surcharge. For each amount less than or equal to 10, the surcharge is 1. For each amount greater than 10, the surcharge is 2.
+
+Example: addWithSurcharge(5, 15) should return 23.*/
 
 
+function addWithSurcharge(a, b) {
+
+  let surcharge = 0;
+
+  if (a <= 10) {
+    surcharge = surcharge + 1;
+  } else {
+    surcharge = surcharge + 2;
+  }
+
+  if (b <= 10) {
+    surcharge = surcharge + 1;
+  } else {
+    surcharge = surcharge + 2;
+  }
+
+  return a + b + surcharge;
+}
+
+addWithSurcharge(1, 1) returns 4.
+
+addWithSurcharge(10, 10) returns 22.
+
+addWithSurcharge(11, 10) returns 24.
