@@ -293,5 +293,46 @@ function xor(a,b){
 return ( a || b ) && !( a && b );)( foo, bar )
 }
 
+/*Write a function equals that checks 3 values for strict equality. The function should only return true if all 3 values are equal.
+
+Example: equals(1, 1, 1) should return true and equals(1, 2, 1) should return false.*/
+function equals(num1,num2,num3){
+
+return num1===num2&&num2===num3
+
+}
+equals(1,'3','Hello');
+//return false
+
+/*Write a function unequal that checks 3 values for strict inequality. The function should return true if all three parameters are strict unequal. Otherwise false.
+
+Example: unequal(1, 2, 3) should return true and unequal(1, 1, 2) should return false.*/
+
+function unequal(num1,num2,num3){
+
+return num1!==num2 && num1!==num3 && num2!==num3
+
+}
+unequal(1, 2, 3) returns true.
+
+/*Exercise
+Write a function repdigit that determines whether a two-digit decimal is a repdigit or not. If the decimal is a repdigit, 'Repdigit!' should be returned, otherwise 'No Repdigit!'.
+
+Example: repdigit(22) should return 'Repdigit!' and repdigit(23) should return 'No Repdigit!'*/
+
+function repdigit (num){
+let ones = num % 10;
+let tens = Math.floor(num / 10);
+  if (ones === tens) {
+    return 'Repdigit!';
+  }
+  return 'No Repdigit!';
+
+}
+//Tests:
+repdigit(11) returns 'Repdigit!'
+
+repdigit(12) returns 'No Repdigit!'.
+
 
 
