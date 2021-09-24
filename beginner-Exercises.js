@@ -254,9 +254,44 @@ round100(4649) returns 4600.
 round100(4650) returns 4700
 
 
-    
-        
+/*Random numbers
+Math.random() returns a pseudo-random number between 0 (inclusive) and 1 (exclusive).
+Exercise
+Write a function dice that returns like a dice a random number between 1 and 6.*/
 
+function dice (){
+
+ const rndInt = Math.floor(Math.random() * 6) + 1
+
+
+return rndInt 
+}
+// Output :
+
+
+/*Write a function add that takes a string with a summation task and returns its result as a number. Two natural numbers should be added. The summation task is a string of the form '102+17'.
+
+Example: add('102+17') should return 119.*/
+
+function add (s){
+
+    let summand1 = parseInt(s, 10);
+    let indexPlus = s.indexOf('+');
+    let sAfterPlus = s.substr(indexPlus + 1);
+    let summand2 = parseInt(sAfterPlus, 10);
+    return summand1 + summand2;
+
+}
+
+/*Boolean
+Another important data type next to String and Number is Boolean. 
+It has only two possible values: true and false. 
+You can calculate with Boolean values similar to numbers. 
+JavaScript has three Boolean operators: && (and), || (or) and ! (not). && links two Boolean values. If both values are true, the result is true. In all other cases it is false. With || the result is true, if at least one of the two input values is true. If both input values are false, the result is false. ! is applied to a single Boolean value and inverts this value: !true is false and !false is true.*/
+function xor(a,b){
+
+return ( a || b ) && !( a && b );)( foo, bar )
+}
 
 
 
